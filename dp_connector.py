@@ -3,8 +3,11 @@ import mysql.connector
 import re
 
 app = Flask(__name__)
-app.secret_key = "2026_campus_incidents_secret_key"
+app.secret_key = "2026_campus_incidents_secret_key"#This can be change
 
+#This is a connection helper file for the campus incident reporting system. 
+#It includes database connection, input validation, user management, 
+#and route handling for login, registration, and dashboard access.
 
 # -----------------------------
 # Database Connection Helper
@@ -67,8 +70,6 @@ def create_user(username: str, password: str):
         db = get_db()
         cursor = db.cursor()
 
-        # IMPORTANT: choose ONE column for password storage.
-        # Your login route uses password_hash, so we'll store into password_hash.
         cursor.execute(
             "INSERT INTO users (username, password_hash) VALUES (%s, %s)",
             (username, password),
@@ -123,7 +124,7 @@ def login():
             if user.get("status") != "ACTIVE":
                 return render_template("index.html", error="Account is inactive.")
 
-            # ✅ PLAIN TEXT verification
+            
             if password == (user.get("password_hash") or ""):
                 session["user_id"] = user["user_id"]
                 session["username"] = user["username"]
@@ -168,7 +169,7 @@ def api_login():
         if user.get("status") != "ACTIVE":
             return {"error": "Account is inactive"}, 403
 
-        # ✅ PLAIN TEXT compare
+        
         if password != (user.get("password_hash") or ""):
             return {"error": "Unauthorized"}, 401
 
@@ -234,3 +235,5 @@ def test_db():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
+    
