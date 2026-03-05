@@ -1,12 +1,22 @@
-NOTE:
-Please review the project structure and examine the existing files and codebase first to understand the current flow before implementing any fixes.
-TO RUN THE PROJECT YOU NEED TO DO THE FOLLOWING
-🖥️ Frontend
-##1. Open a terminal and navigate to the frontend folder:
-    Install dependencies and start the dev server:
-        cd app
-        npm install
-        npm run dev
+# Project Setup Guide
+
+## NOTE
+Please review the **project structure** and examine the existing files and codebase first to understand the current flow before implementing any fixes.
+
+---
+
+# How to Run the Project
+
+## 🖥️ Frontend
+
+1. Open a terminal and navigate to the **frontend folder**.
+
+2. Install dependencies and start the development server:
+
+```bash
+cd app
+npm install
+npm run dev
 
 The React/Tailwind UI will be served (default http://localhost:5173).
 
