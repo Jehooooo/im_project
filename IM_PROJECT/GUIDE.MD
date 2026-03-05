@@ -2,7 +2,7 @@ NOTE:
 Please review the project structure and examine the existing files and codebase first to understand the current flow before implementing any fixes.
 TO RUN THE PROJECT YOU NEED TO DO THE FOLLOWING
 🖥️ Frontend
-1. Open a terminal and navigate to the frontend folder:
+##1. Open a terminal and navigate to the frontend folder:
     Install dependencies and start the dev server:
         cd app
         npm install
