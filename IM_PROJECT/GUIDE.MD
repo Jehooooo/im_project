@@ -19,7 +19,7 @@ npm install
 npm run dev
 
 The React/Tailwind UI will be served (default http://localhost:5173).
-
+---
 ## 🧠 Backend
 Change directory to the backend:
     cd ..
